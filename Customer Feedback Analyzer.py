@@ -8,8 +8,7 @@ Original file is located at
 """
 
 
-# 1. IMPORT LIBRARIES
-# ==============================
+# IMPORTING DIFFERENT LIBRARIES AND DOWNLOADING STOPWORDS
 import pandas as pd
 import numpy as np
 import re
