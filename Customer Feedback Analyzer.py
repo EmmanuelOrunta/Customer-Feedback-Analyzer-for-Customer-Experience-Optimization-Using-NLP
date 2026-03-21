@@ -42,16 +42,17 @@ df = df.sample(50000)  # reduce size for performance
 
 df.head() # Preview first five rows of the transformed dataset
 
-# ===============================
-# 3. TEXT CLEANING
-# ===============================
-def clean_text(text):
-    text = text.lower()
-    text = re.sub(r"http\S+", "", text)   # remove links
-    text = re.sub(r"[^a-zA-Z]", " ", text)
-    return text
+# DATA CLEANING
+
+# Function to convert text to lower case, remove strings like numbers and remove URL links 
+def clean_text(input_text):
+    input_text = input_text.lower()
+    input_text = re.sub(r"http\S+", "", input_text)   # remove links
+    input_text = re.sub(r"[^a-zA-Z]", " ", input_text) # removing anything that is not a letter 
+    return input_text
 
 df['cleaned'] = df['text'].apply(clean_text)
+df.head()
 
 # ===============================
 # 4. REMOVE STOPWORDS
