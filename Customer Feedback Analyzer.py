@@ -28,7 +28,7 @@ nltk.download('stopwords')
 
 #  DATASET LOAD AND PREVIEW
 
-df = pd.read_csv("twcs.csv")  # Twitter dataset
+df = pd.read_csv("twcs.csv", encoding='latin1', on_bad_lines='skip')  # Twitter dataset
 
 df.head()
 
@@ -39,6 +39,8 @@ df = df[df['inbound'] == True]
 df = df[['text']].dropna()
 
 df = df.sample(50000)  # reduce size for performance
+
+df.head() # Preview first five rows of the transformed dataset
 
 # ===============================
 # 3. TEXT CLEANING
