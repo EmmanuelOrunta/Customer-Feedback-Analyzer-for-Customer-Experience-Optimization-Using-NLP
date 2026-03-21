@@ -26,10 +26,11 @@ from wordcloud import WordCloud
 
 nltk.download('stopwords')
 
-# ===============================
-# 2. LOAD DATASET
-# ===============================
+#  DATASET LOAD AND PREVIEW
+
 df = pd.read_csv("twcs.csv")  # Twitter dataset
+
+df.head()
 
 # Keep only customer messages
 df = df[df['inbound'] == True]
