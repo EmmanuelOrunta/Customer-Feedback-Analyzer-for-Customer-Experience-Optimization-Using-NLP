@@ -54,13 +54,15 @@ def clean_text(input_text):
 df['cleaned'] = df['text'].apply(clean_text)
 df.head()
 
-# ===============================
-# 4. REMOVE STOPWORDS
-# ===============================
+# REMOVE STOPWORDS
+
 stop_words = set(stopwords.words('english'))
 
-def remove_stopwords(text):
-    return " ".join([word for word in text.split() if word not in stop_words])
+# Defining a function to remove stopwords (irrelevant words) to improve accuracy and reduce noise 
+def remove_stopwords(sentence):
+    words = sentence.split()
+    filtered_words = [word for word in words if word not in stop_words]
+    return " ".join(filtered_words)
 
 df['processed'] = df['cleaned'].apply(remove_stopwords)
 
