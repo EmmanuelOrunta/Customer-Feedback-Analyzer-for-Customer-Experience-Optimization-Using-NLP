@@ -96,17 +96,17 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 model = LogisticRegression()
 model.fit(X_train, y_train)
 
-# ===============================
-# 9. EVALUATION
-# ===============================
+
+# EVALUATION
+
 y_pred = model.predict(X_test)
 
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print(classification_report(y_test, y_pred))
 
-# ===============================
-# 10. CHURN RISK CREATION
-# ===============================
+ 
+# CHURN RISK DEFINITION
+
 def churn_risk(sentiment):
     if sentiment == "negative":
         return "High Risk"
