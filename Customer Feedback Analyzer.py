@@ -80,22 +80,19 @@ def label_sentiment(text):
 
 df['sentiment'] = df['processed'].apply(label_sentiment)
 
-# ===============================
-# 6. FEATURE EXTRACTION (TF-IDF)
-# ===============================
+# FEATURE EXTRACTION (TF-IDF)
+
 vectorizer = TfidfVectorizer(max_features=5000)
 
 X = vectorizer.fit_transform(df['processed'])
 y = df['sentiment']
 
-# ===============================
-# 7. TRAIN TEST SPLIT
-# ===============================
+
+# TRAIN TEST SPLIT AND MODEL TRAINING
+
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
-# ===============================
-# 8. MODEL TRAINING
-# ===============================
+# Choose the Logistic Regression because its good for classification purposes
 model = LogisticRegression()
 model.fit(X_train, y_train)
 
