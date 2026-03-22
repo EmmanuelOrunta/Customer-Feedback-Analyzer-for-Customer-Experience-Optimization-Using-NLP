@@ -66,14 +66,13 @@ def remove_stopwords(sentence):
 
 df['processed'] = df['cleaned'].apply(remove_stopwords)
 
-# ===============================
-# 5. CREATE SENTIMENT LABELS
-# ===============================
-# Simple rule-based labeling (for demo)
+# ASSIGNING SENTIMENT LABELS TO TEACH OUR MODEL
+
+# Simple rule-based labeling for teaching 
 
 def label_sentiment(text):
-    negative_words = ['not', 'no', 'delay', 'bad', 'worst', 'issue', 'problem', 'complaint']
-
+    negative_words = ['not', 'no', 'delay', 'bad', 'worst', 'issue', 'problem', 'complaint', 'complaining', 'poor', 'difficult']
+    
     if any(word in text for word in negative_words):
         return "negative"
     else:
