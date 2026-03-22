@@ -115,9 +115,9 @@ def churn_risk(sentiment):
 
 df['churn_risk'] = df['sentiment'].apply(churn_risk)
 
-# ===============================
-# 11. VISUALIZATION
-# ===============================
+
+# VISUALIZATION
+
 sns.countplot(x='sentiment', data=df)
 plt.title("Sentiment Distribution")
 plt.show()
