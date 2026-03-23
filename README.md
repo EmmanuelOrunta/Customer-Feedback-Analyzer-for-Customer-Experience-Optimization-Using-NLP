@@ -128,10 +128,3 @@ Organizations can:
 - Enhance customer experience  
 
 ---
-
-## ▶️ How to Run the Project
-
-1. Clone the repository  
-2. Install required libraries:
-   ```bash
-   pip install pandas numpy nltk scikit-learn matplotlib seaborn wordcloud
