@@ -128,4 +128,4 @@ Organizations can:
 - Enhance customer experience  
 
 ---
-This project was used to practice basic machine learning skills and models..
+Note: This project was used to practice basic machine learning skills and models..
