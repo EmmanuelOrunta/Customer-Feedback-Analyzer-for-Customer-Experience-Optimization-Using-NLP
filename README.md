@@ -33,7 +33,7 @@ The goal is to help organizations proactively identify dissatisfied customers an
 
 ## 📂 Dataset
 
-The dataset used is a Twitter Customer Support dataset (`twcs.csv`), containing real customer interactions.
+The dataset used is a Twitter Customer Support dataset (`twcs.csv`), containing real customer interactions which was gotten from kaggle.
 
 ### Data Preparation:
 - Filtered only customer messages (`inbound = True`)  
