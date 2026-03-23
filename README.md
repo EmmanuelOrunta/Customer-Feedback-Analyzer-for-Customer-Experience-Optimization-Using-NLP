@@ -127,3 +127,5 @@ Organizations can:
 - Reduce churn  
 - Enhance customer experience  
 
+---
+This project was used to practice basic machine learning skills and models..
