@@ -61,7 +61,8 @@ The dataset used is a Twitter Customer Support dataset (`twcs.csv`), containing 
 
 ### 4. Feature Extraction
 - Used **TF-IDF (Term Frequency - Inverse Document Frequency)**  
-- Converted text into numerical vectors  
+- Converts text data into numerical format so machine learning models can understand it
+- Transforms sentences into vectors (numbers) 
 - Limited to top 5000 features  
 
 ### 5. Model Training
