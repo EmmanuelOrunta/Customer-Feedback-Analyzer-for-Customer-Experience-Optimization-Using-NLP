@@ -76,6 +76,7 @@ The dataset used is a Twitter Customer Support dataset (`twcs.csv`), containing 
   - Classification report (precision, recall, F1-score)  
 
 ### 7. Churn Risk Prediction
+This section of the code segments each of the sentinent into High Risk or Low Risk.. Basically saying that if a comment or feedback is negative, classify the review as a High Risk
 - Negative sentiment → **High Risk**  
 - Positive sentiment → **Low Risk**  
 
