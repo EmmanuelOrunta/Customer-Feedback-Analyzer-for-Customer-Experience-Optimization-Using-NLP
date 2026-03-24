@@ -122,9 +122,8 @@ sns.countplot(x='sentiment', data=df)
 plt.title("Sentiment Distribution")
 plt.show()
 
-# ===============================
-# 12. WORD CLOUD
-# ===============================
+
+# WORD CLOUD
 negative_text = " ".join(df[df['sentiment'] == "negative"]['processed'])
 
 wordcloud = WordCloud(width=800, height=400).generate(negative_text)
